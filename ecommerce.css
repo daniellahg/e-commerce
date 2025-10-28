@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto' , 'sans-serif';
+}
+
+.text--purple {
+    color: rgb(204, 89, 233)
+}
+
+img {
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 56px;
+    color: rgb(204, 89, 233);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: rgb(84, 84, 84);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+button:hover {
+ transform: translateY(2px);
+   transition: all 600ms ease;
+}
+
+/* NAV */
+
+nav {
+    height: 120px;
+    display: flex;
+
+}
+
+.nav__container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 24px 24px;
+
+}
+
+.nav__logo--wrapper {
+    width: 160px;
+    
+}
+
+
+
+ul {
+    display: flex;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 20px; 
+    color: rgb(84, 84, 84);
+    font-weight: bold;
+    padding: 8px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--primary {
+    border: 2px solid rgb(84, 84, 84);
+    border-radius: 4px;
+}
+
+.nav__link--primary:hover {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+#landing {
+    background-color: #e2a9f11a;
+}
+
+header {
+    height: calc(100vh - 120px);
+}
+
+.header__container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn {
+    background-color: rgb(204, 89, 233);
+    color: rgb(224, 216, 216);
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__img--wrapper {
+    padding: 20px;
+    height: 100px;
+    max-height: 50vh;
+}
