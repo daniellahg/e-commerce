@@ -260,10 +260,11 @@ FEATURES
 }
 
 .game {
-    width: 25%;
-    padding: 24px;
+ width: calc(100% / 4);
+padding: 24px;
 }
 .game__img {
+    height: auto;
     max-height: 380px;
     transition: all 300ms ease;
     cursor: not-allowed;
