@@ -365,7 +365,7 @@ FEATURES
 padding: 24px;
 }
 .game__img {
-    height: auto;
+    height: 500px;
     max-height: 380px;
     transition: all 300ms ease;
     cursor: not-allowed;
@@ -470,6 +470,10 @@ footer {
 
     .game {
         width: 50%
+    }
+
+    .game__img {
+        height: 250px;
     }
 
     
