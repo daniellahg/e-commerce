@@ -7,9 +7,17 @@
     font-family: 'roboto' , 'sans-serif';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    max-width: 101%;
+    max-width: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .text--purple {
@@ -46,18 +54,17 @@ button {
 }
 
 
-button:hover {
+.btn:hover {
  transform: translateY(2px);
    transition: all 600ms ease;
 }
 
 .container {
     padding: 56px 0;
-    width: 101%;
+    width: 100%;
 }
 
 .row {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -71,6 +78,18 @@ button:hover {
 
 .section__title {
     padding-bottom: 24px;
+}
+
+.no-cursor {
+    cursor: not-allowed;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 /* 
 
@@ -131,9 +150,72 @@ li {
     text-decoration: none;
 }
 
+.btn__menu {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(204, 89, 233);
+    display: none;
+
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: rgb(84, 84, 84);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    font-size: 40px;
+    color: white;
+
+}
+
+
+
+
 /* 
 
-HEADER
+LANDING
 
 */
 
@@ -184,6 +266,7 @@ header {
 .header__sub-title {
     margin-bottom: 32px;
 }
+
 /* 
 
 HIGHLIGHTS
@@ -220,6 +303,7 @@ HIGHLIGHTS
 .highlight__wrapper {
     display: flex;
     padding: 24px 0;
+    flex-wrap: wrap;
 }
 
 .highlight {
@@ -229,6 +313,7 @@ HIGHLIGHTS
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 .highlight__para {
@@ -252,7 +337,9 @@ HIGHLIGHTS
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
-    color: rgb(204, 89, 233)
+    color: rgb(204, 89, 233);
+    text-align: center;
+
 }
 
 /* 
@@ -330,3 +417,85 @@ EXPLORE MORE BOOKS
 }
 
 
+/* 
+
+FOOTER
+
+*/
+
+footer {
+    background-color: rgb(43, 41, 41);
+}
+
+.footer__logo {
+    display: flex;
+}
+
+.footer__logo--img {
+    width: 160px;
+}
+.footer__list {
+    margin: 20px 0 24px 0;
+
+}
+
+.footer__link {
+    padding: 0 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.footer__copyright {
+    color: white;
+    text-align: center;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width:768px) {
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .game {
+        width: 50%
+    }
+
+    
+} 
+
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .highlight {
+        width: 100%;   
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
+
+    }
+
+
+}
