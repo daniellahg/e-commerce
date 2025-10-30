@@ -472,10 +472,6 @@ footer {
         width: 50%
     }
 
-    .game__img {
-        height: 250px;
-    }
-
     
 } 
 
@@ -501,5 +497,9 @@ footer {
 
     }
 
+
+    .game__img {
+        height: auto;
+    }
 
 }
